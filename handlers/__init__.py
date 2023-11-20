@@ -1,8 +1,5 @@
 from aiogram import Router
+from .nextbutton import router_next1 as game1_message_router
+router_keyboard = Router(name="user_keyboard_router")
 
-# from .callbacks import router as callbacks_router
-from .commands import router as commands_router
-
-router = Router(name="user")
-
-__all__ = ["commands_router"]
+router_keyboard.include_routers(game1_message_router)
