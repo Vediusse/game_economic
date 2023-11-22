@@ -5,7 +5,7 @@ from aiogram import Bot, Dispatcher
 
 from config import Config
 
-from handlers import commands_router
+from handlers import commands_router, callbacks_router
 
 
 async def init_bot() -> Tuple[Bot, Dispatcher]:
@@ -13,5 +13,6 @@ async def init_bot() -> Tuple[Bot, Dispatcher]:
     dp = Dispatcher()
     dp.include_routers(
         commands_router,
+        callbacks_router
     )
     return bot, dp
