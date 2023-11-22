@@ -8,7 +8,7 @@ router_next = Router(name="game1_message_router")
 
 
 @router_next.callback_query(F.data == "1game_message")
-async def send_first_message(callback: types.CallbackQuery):
+async def send_first_message(callback: types.CallbackQuery, **attributes):
     await callback.message.edit_text(
         text=render_template(template_name="gamemessages.j2", data={"state": random.randint(1, 4)}),
         reply_markup=user_game_keyboard({"Иностранные отношения": 100, "Поддержка правительства": 200,
