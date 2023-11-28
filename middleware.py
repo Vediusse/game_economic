@@ -16,4 +16,5 @@ class DbSessionMiddleware(BaseMiddleware):
         data: Dict[str, Any],
     ) -> Any:
         data["stats"] = self.stats
+
         return await handler(event, data)
