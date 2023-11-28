@@ -1,5 +1,4 @@
 from aiogram.filters.callback_data import CallbackData
-from typing import Optional
 
 
 class MyCallback(CallbackData, prefix="my"):

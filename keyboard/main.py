@@ -1,10 +1,7 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 from keyboard.callback_factory import MyCallback, ConsequencesCallbackFactory
-
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
-from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 
 def user_game_keyboard(
