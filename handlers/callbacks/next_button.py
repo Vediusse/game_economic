@@ -21,7 +21,19 @@ async def send_first_message(callback: types.CallbackQuery, **attributes):
         ),
         reply_markup=user_game_keyboard(
             attributes.get("stats"),
-            ["Согласиться", "Отказаться"],
+            [
+                render_template(
+                    template_name="answer_button.j2",
+                    data={
+                        "state": attributes.get("message_number"),
+                        "agreement": "Yes",
+                    },
+                ),
+                render_template(
+                    template_name="answer_button.j2",
+                    data={"state": attributes.get("message_number"), "agreement": "No"},
+                ),
+            ],
             attributes["message_number"],
         ),
     )
@@ -76,7 +88,15 @@ async def send_first_message(
         ),
         reply_markup=get_consequences(
             stats,
-            ["ЧТООООО?"],
+            [
+                render_template(
+                    template_name="answer_button_consequences.j2",
+                    data={
+                        "state": callback_data.message,
+                        "agreement": callback_data.agreement,
+                    },
+                )
+            ],
             callback_data.message,
         ),
     )
@@ -102,7 +122,19 @@ async def send_first_message(
         ),
         reply_markup=user_game_keyboard(
             stats,
-            ["Согласиться", "Отказаться"],
+            [
+                render_template(
+                    template_name="answer_button.j2",
+                    data={
+                        "state": attributes.get("message_number"),
+                        "agreement": "Yes",
+                    },
+                ),
+                render_template(
+                    template_name="answer_button.j2",
+                    data={"state": attributes.get("message_number"), "agreement": "No"},
+                ),
+            ],
             attributes["message_number"],
         ),
     )
