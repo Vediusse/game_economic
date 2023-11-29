@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "game-economic"
+version = "0.0.1"
+description = "Bot-game for fun"
+authors = ["Valerii Rublic <vedius.rublev@gmail.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jinja2 = "^3.1.2"
+aiogram = "^3.1.1"
+python-dotenv = "^1.0.0"
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
