@@ -1,12 +1,9 @@
-import random
 from typing import Tuple
 
 from aiogram import Bot, Dispatcher
 
 from config import Config
-
 from handlers import commands_router, callbacks_router
-
 from middleware import DbSessionMiddleware
 
 

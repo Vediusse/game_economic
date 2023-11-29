@@ -1,5 +1,6 @@
-from aiogram import F, types
 import random
+
+from aiogram import F, types
 from aiogram import Router
 
 from keyboard.callback_factory import MyCallback, ConsequencesCallbackFactory
@@ -9,13 +10,13 @@ from templates.setup import render_template
 router_next = Router(name="game1_message_router")
 
 
-@router_next.callback_query(F.data == "1game_message")
+@router_next.callback_query(F.data == "game_message")
 async def send_first_message(callback: types.CallbackQuery, **attributes):
     attributes["message_number"] = random.randint(1, 4)
 
     await callback.message.edit_text(
         text=render_template(
-            template_name="gamemessages.j2",
+            template_name="game_messages.j2",
             data={"state": attributes.get("message_number")},
         ),
         reply_markup=user_game_keyboard(
@@ -28,10 +29,10 @@ async def send_first_message(callback: types.CallbackQuery, **attributes):
 
 @router_next.callback_query(MyCallback.filter())
 async def send_first_message(
-        callback: types.CallbackQuery, callback_data: MyCallback, **attributes
+    callback: types.CallbackQuery, callback_data: MyCallback, **attributes
 ):
     consequences = render_template(
-        template_name="negativeorpositive.j2",
+        template_name="impact.j2",
         data={"state": callback_data.message, "agreement": callback_data.agreement},
     )
     stats = {
@@ -63,7 +64,7 @@ async def send_first_message(
             await callback.message.edit_text(
                 text=render_template(
                     template_name="win.j2",
-                    data={"state": random.randint(1,4)},
+                    data={"state": random.randint(1, 4)},
                 ),
             )
             return
@@ -83,7 +84,9 @@ async def send_first_message(
 
 @router_next.callback_query(ConsequencesCallbackFactory.filter())
 async def send_first_message(
-        callback: types.CallbackQuery, callback_data: ConsequencesCallbackFactory, **attributes
+    callback: types.CallbackQuery,
+    callback_data: ConsequencesCallbackFactory,
+    **attributes
 ):
     stats = {
         "foreign": callback_data.foreign,
@@ -94,7 +97,7 @@ async def send_first_message(
     attributes["message_number"] = random.randint(1, 4)
     await callback.message.edit_text(
         text=render_template(
-            template_name="gamemessages.j2",
+            template_name="game_messages.j2",
             data={"state": attributes["message_number"]},
         ),
         reply_markup=user_game_keyboard(
