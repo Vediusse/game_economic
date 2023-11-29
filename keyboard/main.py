@@ -25,15 +25,9 @@ def user_game_keyboard(
         InlineKeyboardButton(text="🪽", callback_data="None"),
     )
     builder.row(
-        InlineKeyboardButton(
-            text=str(stats.get("foreign")), callback_data="None"
-        ),
-        InlineKeyboardButton(
-            text=str(stats.get("domestic")), callback_data="None"
-        ),
-        InlineKeyboardButton(
-            text=str(stats.get("freedom")), callback_data="None"
-        ),
+        InlineKeyboardButton(text=str(stats.get("foreign")), callback_data="None"),
+        InlineKeyboardButton(text=str(stats.get("domestic")), callback_data="None"),
+        InlineKeyboardButton(text=str(stats.get("freedom")), callback_data="None"),
     )
 
     builder.row(
@@ -64,8 +58,6 @@ def user_game_keyboard(
     return builder.as_markup()
 
 
-
-
 def get_consequences(
     stats: dict, agreement: list, message: int
 ) -> InlineKeyboardMarkup:
@@ -88,15 +80,9 @@ def get_consequences(
         InlineKeyboardButton(text="🪽", callback_data="None"),
     )
     builder.row(
-        InlineKeyboardButton(
-            text=str(stats.get("foreign")), callback_data="None"
-        ),
-        InlineKeyboardButton(
-            text=str(stats.get("domestic")), callback_data="None"
-        ),
-        InlineKeyboardButton(
-            text=str(stats.get("freedom")), callback_data="None"
-        ),
+        InlineKeyboardButton(text=str(stats.get("foreign")), callback_data="None"),
+        InlineKeyboardButton(text=str(stats.get("domestic")), callback_data="None"),
+        InlineKeyboardButton(text=str(stats.get("freedom")), callback_data="None"),
     )
 
     builder.row(
