@@ -1,5 +1,4 @@
 
-![1](https://github.com/Studio-Yandex-Practicum/alumni_mng/assets/109984895/4669ca28-62a3-45c7-8288-b0f4a423f7ae)
 
 <h1 align="center">Добро пожаловать! Ты попал на страницу командного проекта Телеграм бота для <a href="" target="_blank">Bot</a> от студентов ИТМО. <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="40"/></h1>
 
