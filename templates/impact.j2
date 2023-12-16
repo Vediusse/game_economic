@@ -116,12 +116,138 @@
     {% if agreement == "Yes" %}
         0,0,-5,5
     {% elif agreement == "No" %}
-        0,0,5 , -5
+        0,0,5,-5
     {% endif %}
 {% elif state == 21 %}
     {% if agreement == "Yes" %}
         5,0,-5,0
     {% elif agreement == "No" %}
         -5,0,5,0
+    {% endif %}
+{% elif state == 22 %}
+    {% if agreement == "Yes" %}
+        +5,+5,-5,0
+    {% elif agreement == "No" %}
+        0,-5,+5,0
+    {% endif %}
+{% elif state == 23 %}
+    {% if agreement == "Yes" %}
+        0,-5,+7,-5
+    {% elif agreement == "No" %}
+        0,+3,-5,+5
+    {% endif %}
+{% elif state == 24 %}
+    {% if agreement == "Yes" %}
+        +5,-5,+5,0
+    {% elif agreement == "No" %}
+        0,+5,-1,0
+    {% endif %}
+{% elif state == 25 %}
+    {% if agreement == "Yes" %}
+        +2,+3,-5,0
+    {% elif agreement == "No" %}
+        -1,-4,+5,0
+    {% endif %}
+{% elif state == 26 %}
+    {% if agreement == "Yes" %}
+        0,-4,+5,-5
+    {% elif agreement == "No" %}
+        0,0,-5,+5
+    {% endif %}
+{% elif state == 27 %}
+    {% if agreement == "Yes" %}
+        0,5,-5,0
+    {% elif agreement == "No" %}
+        0,-5,5,0
+    {% endif %}
+{% elif state == 28 %}
+    {% if agreement == "Yes" %}
+        5,-7,5,0
+    {% elif agreement == "No" %}
+        -5,7,-5,0
+    {% endif %}
+{% elif state == 29 %}
+    {% if agreement == "Yes" %}
+        5,0,-5,0
+    {% elif agreement == "No" %}
+        -5,0,5,0
+    {% endif %}
+{% elif state == 30 %}
+    {% if agreement == "Yes" %}
+        0,-5,+5,-5
+    {% elif agreement == "No" %}
+        0,0,-5,+5
+    {% endif %}
+{% elif state == 31 %}
+    {% if agreement == "Yes" %}
+        5,-5,-5,5р
+    {% elif agreement == "No" %}
+        -5,5,5,-5
+    {% endif %}
+{% elif state == 32 %}
+    {% if agreement == "Yes" %}
+        -5,0,-5,10
+    {% elif agreement == "No" %}
+        5,0,5,-10
+    {% endif %}
+{% elif state == 33 %}
+    {% if agreement == "Yes" %}
+        0,10,-5,-5
+    {% elif agreement == "No" %}
+        0,-10,10,0
+    {% endif %}
+{% elif state == 34 %}
+    {% if agreement == "Yes" %}
+        5,0,5,-10
+    {% elif agreement == "No" %}
+        -5,0,-5,10
+    {% endif %}
+{% elif state == 35 %}
+    {% if agreement == "Yes" %}
+        0,5,-10,5
+    {% elif agreement == "No" %}
+        0,0,10,-10
+    {% endif %}
+{% elif state == 36 %}
+    {% if agreement == "Yes" %}
+        0,-5,10,-5
+    {% elif agreement == "No" %}
+        0,10,-10,0
+    {% endif %}
+{% elif state == 37 %}
+    {% if agreement == "Yes" %}
+        -10,0,10,0
+    {% elif agreement == "No" %}
+        10,0,-10,0
+    {% endif %}
+{% elif state == 38 %}
+    {% if agreement == "Yes" %}
+        0,-5,10,-5
+    {% elif agreement == "No" %}
+        0,10,-10,0
+    {% endif %}
+{% elif state == 39 %}
+    {% if agreement == "Yes" %}
+        0,0,10,-10
+    {% elif agreement == "No" %}
+        0,0,-10,10
+    {% endif %}
+{% elif state == 40 %}
+    {% if agreement == "Yes" %}
+        0,0,10,-10
+    {% elif agreement == "No" %}
+        -5,0,-5,10
+    {% endif %}
+{% elif state == 41 %}
+    {% if agreement == "Yes" %}
+        5,0,-10,5
+    {% elif agreement == "No" %}
+        0,0,10,-10
+    {% endif %}
+{% elif state == 42 %}
+    {% if agreement == "Yes" %}
+        -5,5,-3,5
+    {% elif agreement == "No" %}
+        0,-5,5,-5
     {% endif %}
 {% endif %}
