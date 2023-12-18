@@ -8,6 +8,7 @@ class MyCallback(CallbackData, prefix="my"):
     domestic: int
     money: int
     freedom: int
+    year: int
 
 
 class ConsequencesCallbackFactory(CallbackData, prefix="my"):
@@ -15,3 +16,4 @@ class ConsequencesCallbackFactory(CallbackData, prefix="my"):
     domestic: int
     money: int
     freedom: int
+    year: int

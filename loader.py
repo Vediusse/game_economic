@@ -17,6 +17,7 @@ async def init_bot() -> Tuple[Bot, Dispatcher]:
         "domestic": 20,
         "freedom": 20,
         "money": 20,
+        "year": 1929
     }
     dp.update.middleware(DbSessionMiddleware(stats=stats))
     return bot, dp

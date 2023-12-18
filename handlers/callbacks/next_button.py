@@ -15,7 +15,7 @@ async def send_first_message(callback: types.CallbackQuery, **attributes):
     attributes["message_number"] = random.randint(1, 4)
 
     await callback.message.edit_text(
-        text=render_template(
+        text= ("Текущий год: " + "1929\n") + render_template(
             template_name="game_messages.j2",
             data={"state": attributes.get("message_number")},
         ),
@@ -52,9 +52,14 @@ async def send_first_message(
         "domestic": callback_data.domestic,
         "money": callback_data.money,
         "freedom": callback_data.freedom,
+        "year": callback_data.year,
     }
     values = [int(x) for x in str(consequences).split(",")]
+
     for i, key in enumerate(stats):
+        if key == "year":
+            stats[key] += 1
+            continue
         stats[key] += values[i]
         if key != "money" and (stats[key] <= 0 or stats[key] >= 100):
             await callback.message.edit_text(
@@ -113,10 +118,11 @@ async def send_first_message(
         "domestic": callback_data.domestic,
         "freedom": callback_data.freedom,
         "money": callback_data.money,
+        "year": callback_data.year,
     }
     attributes["message_number"] = random.randint(1, 4)
     await callback.message.edit_text(
-        text=render_template(
+        text=("Текущий год: " + str(stats.get("year")) + "\n") + render_template(
             template_name="game_messages.j2",
             data={"state": attributes["message_number"]},
         ),

@@ -40,6 +40,7 @@ def user_game_keyboard(
                 domestic=str(stats.get("domestic")),
                 money=str(stats.get("money")),
                 freedom=str(stats.get("freedom")),
+                year=str(stats.get("year")),
             ).pack(),
         ),
         InlineKeyboardButton(
@@ -51,6 +52,7 @@ def user_game_keyboard(
                 domestic=str(stats.get("domestic")),
                 money=str(stats.get("money")),
                 freedom=str(stats.get("freedom")),
+                year=str(stats.get("year")),
             ).pack(),
         ),
     )
@@ -93,6 +95,7 @@ def get_consequences(
                 domestic=str(stats.get("domestic")),
                 money=str(stats.get("money")),
                 freedom=str(stats.get("freedom")),
+                year=str(stats.get("year")),
             ).pack(),
         )
     )
