@@ -12,7 +12,7 @@ router_next = Router(name="game1_message_router")
 
 @router_next.callback_query(F.data == "game_message")
 async def send_first_message(callback: types.CallbackQuery, **attributes):
-    attributes["message_number"] = random.randint(1, 4)
+    attributes["message_number"] = random.randint(1, 42)
 
     await callback.message.edit_text(
         text= ("Текущий год: " + "1929\n") + render_template(
@@ -81,7 +81,7 @@ async def send_first_message(
             await callback.message.edit_text(
                 text=render_template(
                     template_name="win.j2",
-                    data={"state": random.randint(1, 4)},
+                    data={"state": random.randint(1, 42)},
                 ),
             )
             return
@@ -120,7 +120,7 @@ async def send_first_message(
         "money": callback_data.money,
         "year": callback_data.year,
     }
-    attributes["message_number"] = random.randint(1, 4)
+    attributes["message_number"] = random.randint(1, 42)
     await callback.message.edit_text(
         text=("Текущий год: " + str(stats.get("year")) + "\n") + render_template(
             template_name="game_messages.j2",
