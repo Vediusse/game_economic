@@ -46,8 +46,4 @@ python main.py
 ```
 
 
-## :juggling_person: Над проектом работали :
 
-| Имя | Роль | Контакты | Гит |
-| - | :-: | :-: | :-: |
-| Валерий Рублёв | тимлид | <a href="https://t.me/weddiusse" target="_blank"> :envelope:</a>  | <a href="https://github.com/Vediusse" target="_blank"> :heavy_check_mark:</a> |
